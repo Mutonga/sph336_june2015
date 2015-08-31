@@ -15,6 +15,8 @@ int main(void){
 
 	//initialize system
 	SystemInit();
+        infra_init();
+ 	uart0_init(UART0_BASE_PTR,periph_clk_khz,115200);
 
 	//initialize UART5 with 8-N-1 settings, 57600 baudrate
 	init_uart(UART5_BASE_PTR,periph_clk_khz,57600);
